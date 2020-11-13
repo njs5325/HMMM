@@ -1,0 +1,60 @@
+div #songTab {
+    display: flex;
+    justify-content: center;
+}
+
+table #songs {
+    width: 100%;
+}
+
+#songs th {
+    padding: 1.5em;
+}
+
+#songs  td {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+table #songs, #songs td, #songs th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+input.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+label.heart {
+    color: white;
+    cursor: pointer;
+    font-size: 2em;
+    align-self: center;  
+    transition: color 0.2s ease-in-out;
+}
+
+label.heart:hover {
+    color: grey;
+}
+
+label.heart::selection {
+    color: none;
+    background: transparent;
+}
+
+label.heart::moz-selection {
+    color: none;
+    background: transparent;
+}
+
+input.heart:checked + label {
+    color: #e2264d;
+}
+

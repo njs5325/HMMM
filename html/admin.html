@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- these are all linking in css (styles) for the page to look pretty and all -->
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/header.css" />
+        <!-- this css is used for user profile 'image' -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- bootstrap css used to style the nav tabs -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- script using jquery so things actually function... -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <title>CSCI320 Project</title>
+    </head>
+    <!-- this page index.html is where the songs are loaded in -->
+    <body>
+        <!-- this part is the very top portion that spans the width -->
+        <header class="header" id="banner">
+            <!-- the site name, top left -->
+            <a href="../index.html">
+                <h1>CovidCarriers Epic Music</h1>
+            </a>
+            <!-- user links, top right -->
+            <a href="user.html">
+                <h2><i class="fa fa-user"> Account</i></h2>
+            </a>
+            <a href="admin.html" class="active">
+                <h2><i class="fa fa-user"> Admin</i></h2>
+            </a>
+        </header>
+        <!-- this div is where the tabs for songs/artists/albums/etc lives -->
+        <div class="container" id="tabs">
+            <div id="panels">
+            <ul class="nav nav-pills nav-justified">
+                <li><a data-tab="Songs">Add Songs</a></li>
+                <li><a data-tab="Artists">Add Artists</a></li>
+                <li><a data-tab="Albums">Add Albums</a></li>
+                <li><a data-tab="Genres">Add Genres</a></li>
+            </ul>
+            </div>
+        </div>
+        <main>
+            <!-- this is where actual content is supposed to load in -->
+            <div id="song">
+                <p>If you are submitting a song for a nonexisting artist or genre, please go create a new artist/genre first. Thank you.</p>
+                <!-- shows when "Songs" is selected, otherwise hidden -->
+                <form id="songForm" method="GET">
+                    Song Name: <input type="text" name="songName"><br>
+                    Song Genre: <input type="text" name="genreId"><br>
+                    Song Length: <input type="number" name="songLength"><br>
+                    Artist: <input type="text" name="artist"><br>
+                    Other Artists: <input type="text" name="otherArtist" value="null"><br>
+                    Album: <input type="text" name="album" value="null"><br>
+                    <input type="button" onclick="submitSong()" value="Submit">
+                </form>
+            </div>
+            <div id="artist">
+                <!-- shows when "Artists" is selected, otherwise hidden -->
+                <form id="artistForm" method="GET">
+                    Artist Name: <input type="text" name="artistName"><br>
+                    <input type="button" onclick="submitArtist()" value="Submit">
+                </form>
+            </div>
+            <div id="album">
+                <p>If you are submitting a song for a nonexisting artist or genre, please go create a new artist/genre first. Thank you.</p>
+                <!-- shows when "Albums" is selected, otherwise hidden -->
+                <form id="albumForm" method="GET">
+                    Album Name: <input type="text" name="albumName"><br>
+                    Album Artist: <input type="text" name="albumArtist"><br>
+                    Album Genre: <input type="text" name="albumGenre"><br>
+                    Album Release Date: <input type="date" name="releaseDate"><br>
+                    <input type="button" onclick="submitAlbum()" value="Submit">
+                </form>
+            </div>
+            <div id="genre">
+                <!-- shows when "Genres" is selected, otherwise hidden -->
+                <form id="genreForm" method="GET">
+                    Genre Name: <input type="text" name="genreName"><br>
+                    <input type="button" onclick="submitGenre()" value="Submit">
+                </form>
+            </div>
+        </main>
+        <!-- links to script used to handle changing of tabs -->
+        <script src="../JS/admin.js"></script>
+    </body>
+</html>

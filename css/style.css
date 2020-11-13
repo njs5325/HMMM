@@ -1,0 +1,87 @@
+/*
+/   filename: style.css
+/   description: css styling for the main structure of the page
+*/
+
+html {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #333;
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    -webkit-animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+            animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+}
+
+/* a bit of fancy color gradient when opening the page */
+@-webkit-keyframes colorize {
+    0% {
+        -webkit-filter: grayscale(100%);
+    }
+    100% {
+        -webkit-filter: grayscale(0%);
+    }
+}
+
+@keyframes colorize {
+    0% {
+        filter: grayscale(100%);
+    }
+    100% {
+        filter: grayscale(0%);
+    }
+}
+/* fancy effect, over */
+
+/* style of the "body" content of the page */
+main {
+    background-color: #e6b6ad;
+    flex: 1 1 auto;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    font-family: "Lucida Sans", sans-serif;
+}
+
+/* styling of the tabs on the page */
+#tabs, #adminpanel {
+    padding: 1%;
+    background-color: white;
+    font-family: "Lucida San", sans-serif;
+}
+div #tabs > ul {
+    display: flex;
+    flex-direction: row;
+}
+div #adminpanel > ul {
+    display: flex;
+    flex-direction: row;
+}
+li a {
+    padding: 3.0em;
+    transition-duration: 0.3s;
+}
+li a:hover {
+    cursor: pointer;
+}
+
+#song {
+    display: hidden;
+}
+/* end of tab styling */
+
+#pageDesc {
+    padding: 2%;
+    background-color: #333;
+    font-size: 20px;
+    color: ghostwhite;
+    font-family: "Lucida Sans", sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}

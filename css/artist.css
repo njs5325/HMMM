@@ -1,0 +1,24 @@
+div #artistTab {
+    display: flex;
+    justify-content: center;
+}
+table #artists {
+    width: 100%;
+}
+
+#artists th {
+    padding: 2em;
+}
+
+#artists td {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+table #artists, #artists td, #artists th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
